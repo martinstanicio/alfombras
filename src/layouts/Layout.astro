@@ -1,0 +1,38 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>Desvelados | {title}</title>
+  </head>
+  <body
+    class="flex min-h-screen flex-col gap-4 bg-background font-serif text-text"
+  >
+    <main class="container max-w-4xl flex-grow">
+      <slot />
+    </main>
+  </body>
+</html>
+<style is:global>
+  h1,
+  h2,
+  h3 {
+    @apply font-sans;
+  }
+</style>
