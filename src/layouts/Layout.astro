@@ -29,7 +29,7 @@ const { title, description } = Astro.props;
   <body
     class="flex min-h-screen flex-col bg-background font-serif leading-relaxed text-text"
   >
-    <Brand as="header" />
+    <Brand as="header" class="sticky top-0 z-10" />
     <div class="flex-grow">
       <slot />
     </div>
