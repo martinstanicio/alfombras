@@ -1,14 +1,18 @@
 ---
 interface Props {
   href: string;
+  class?: string;
 }
 
-const { href } = Astro.props;
+const { href, class: className = "" } = Astro.props;
 ---
 
 <a
   href={href}
-  class="rounded bg-primary px-4 py-2 font-sans hover:brightness-95"
+  class:list={[
+    "inline-block rounded bg-primary px-4 py-2 font-sans hover:brightness-95",
+    className,
+  ]}
 >
   <slot />
 </a>
