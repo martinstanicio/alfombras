@@ -1,4 +1,6 @@
 ---
+import genPath from "../util/generatePath";
+
 interface Props {
   as: keyof HTMLElementTagNameMap;
 }
@@ -9,7 +11,7 @@ const { as: Wrapper } = Astro.props;
 <div class="bg-text py-4 text-background">
   <Wrapper class="container flex items-center justify-between">
     <a href="/">
-      <img src="/logo.png" alt="logo" class="h-8" />
+      <img src={genPath("logo.png")} alt="logo" class="h-8" />
       <span class="sr-only">Desvelados</span>
     </a>
 

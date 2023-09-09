@@ -1,5 +1,10 @@
+---
+import genPath from "../util/generatePath";
+---
+
 <div
-  class="grid min-h-[60vh] place-items-center bg-[url('/hero.jpg')] bg-cover bg-center"
+  class={`grid min-h-[60vh] place-items-center bg-cover bg-center`}
+  style={`background-image: url('${genPath("hero.jpg")}');`}
 >
   <div
     class="grid h-full w-full place-items-center backdrop-brightness-50 lg:backdrop-blur-sm"
