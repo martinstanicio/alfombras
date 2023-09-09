@@ -26,6 +26,7 @@ const products = await getCollection("products");
             img={img}
             href={genPath(`productos/${slug}`)}
             price={price}
+            slug={slug}
           >
             <p>{description}</p>
           </Card>

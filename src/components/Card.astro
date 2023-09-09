@@ -8,13 +8,14 @@ interface Props {
   href: string;
   img: ImageMetadata;
   price: number;
+  slug: string;
 }
 
-const { title, href, img, price } = Astro.props;
+const { title, href, img, price, slug } = Astro.props;
 ---
 
 <article class="block overflow-hidden rounded bg-secondary">
-  <Image src={img} alt={title} />
+  <Image src={img} alt={title} transition:name={slug} />
   <div class="border-primary-default border-x px-4 py-2">
     <h3 class="text-primary-dark text-xl font-bold">{title}</h3>
     <slot />
