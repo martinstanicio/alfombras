@@ -26,7 +26,9 @@ const { title, description } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>Desvelados | {title}</title>
   </head>
-  <body class="flex min-h-screen flex-col bg-background font-serif text-text">
+  <body
+    class="flex min-h-screen flex-col bg-background font-serif leading-relaxed text-text"
+  >
     <Brand as="header" />
     <div class="flex-grow">
       <slot />
