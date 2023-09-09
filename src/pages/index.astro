@@ -3,8 +3,10 @@ import genPath from "../util/generatePath";
 import Hero from "../components/Hero.astro";
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
-
+import { getCollection } from "astro:content";
 import aromatizador from "../assets/aromatizador.jpg";
+
+const products = await getCollection("products");
 ---
 
 <Layout
@@ -17,17 +19,18 @@ import aromatizador from "../assets/aromatizador.jpg";
     <div
       class="mx-auto grid max-w-4xl grid-cols-1 place-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3"
     >
-      <Card
-        title="Aromatizador"
-        img={aromatizador}
-        href={genPath("productos/aromatizador")}
-        price={1000}
-      >
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-          at? Consequuntur accusantium esse ab nobis?
-        </p>
-      </Card>
+      {
+        products.map(({ data: { title, description, price, img }, slug }) => (
+          <Card
+            title={title}
+            img={img}
+            href={genPath(`productos/${slug}`)}
+            price={price}
+          >
+            <p>{description}</p>
+          </Card>
+        ))
+      }
     </div>
   </section>
 </Layout>
