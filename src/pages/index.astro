@@ -3,6 +3,8 @@ import genPath from "../util/generatePath";
 import Hero from "../components/Hero.astro";
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
+
+import aromatizador from "../assets/aromatizador.jpg";
 ---
 
 <Layout title="Relajación y tranquilidad en tus manos con Desvelados">
@@ -14,7 +16,7 @@ import Layout from "../layouts/Layout.astro";
     >
       <Card
         title="Aromatizador"
-        img="https://images.unsplash.com/photo-1581514439794-f9777f7c22eb"
+        img={aromatizador}
         href={genPath("productos/aromatizador")}
         price={1000}
       >

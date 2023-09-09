@@ -1,10 +1,11 @@
 ---
 import Button from "./Button.astro";
+import { Image } from "astro:assets";
 
 interface Props {
   title: string;
   href: string;
-  img: string;
+  img: ImageMetadata;
   price: number;
 }
 
@@ -18,7 +19,7 @@ const formattedPrice = ARS.format(price);
 ---
 
 <article class="block overflow-hidden rounded bg-secondary">
-  <img src={img} alt={title} class="aspect-[4/3] w-full object-cover" />
+  <Image src={img} alt={title} />
   <div class="border-primary-default border-x px-4 py-2">
     <h3 class="text-primary-dark text-xl font-bold">{title}</h3>
     <slot />

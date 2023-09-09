@@ -1,10 +1,13 @@
 ---
-import genPath from "../util/generatePath";
+import hero from "../assets/hero.jpg";
+import { getImage } from "astro:assets";
+
+const optimizedHero = await getImage({ src: hero });
 ---
 
 <div
   class={`grid min-h-[60vh] place-items-center bg-cover bg-center`}
-  style={`background-image: url('${genPath("hero.jpg")}');`}
+  style={`background-image: url(${optimizedHero.src});`}
 >
   <div
     class="grid h-full w-full place-items-center backdrop-brightness-50 lg:backdrop-blur-sm"
