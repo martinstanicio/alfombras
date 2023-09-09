@@ -1,0 +1,32 @@
+---
+import Button from "./Button.astro";
+
+interface Props {
+  title: string;
+  href: string;
+  img: string;
+  price: number;
+}
+
+const ARS = new Intl.NumberFormat("es-AR", {
+  style: "currency",
+  currency: "ARS",
+  maximumFractionDigits: 0,
+});
+const { title, href, img, price } = Astro.props;
+const formattedPrice = ARS.format(price);
+---
+
+<article class="block overflow-hidden rounded bg-secondary">
+  <img src={img} alt={title} class="aspect-[4/3] w-full object-cover" />
+  <div class="border-primary-default border-x px-4 py-2">
+    <h3 class="text-primary-dark text-xl font-bold">{title}</h3>
+    <slot />
+  </div>
+  <div class="flex items-center gap-4 p-4">
+    <Button href={href}>Comprar</Button>
+    <span class="text-lg font-bold">
+      {formattedPrice}
+    </span>
+  </div>
+</article>
