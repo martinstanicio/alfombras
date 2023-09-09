@@ -1,4 +1,5 @@
 ---
+import genPath from "../util/generatePath";
 import logo from "../assets/logo.png";
 import { Image } from "astro:assets";
 
@@ -11,7 +12,7 @@ const { as: Wrapper } = Astro.props;
 
 <div class="bg-text py-4 text-background">
   <Wrapper class="container flex items-center justify-between">
-    <a href="/">
+    <a href={genPath("")}>
       <Image src={logo} alt="logo" class="h-8 w-auto" />
       <span class="sr-only">Desvelados</span>
     </a>
