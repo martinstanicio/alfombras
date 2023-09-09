@@ -1,4 +1,6 @@
 ---
+import Brand from "../components/Brand.astro";
+
 interface Props {
   title: string;
 }
@@ -21,12 +23,12 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>Desvelados | {title}</title>
   </head>
-  <body
-    class="flex min-h-screen flex-col gap-4 bg-background font-serif text-text"
-  >
-    <main class="container max-w-4xl flex-grow">
+  <body class="bg-background font-serif text-text">
+    <Brand as="header" />
+    <main>
       <slot />
     </main>
+    <Brand as="footer" />
   </body>
 </html>
 <style is:global>
