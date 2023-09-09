@@ -32,7 +32,7 @@ const { title, description } = Astro.props;
     class="flex min-h-screen flex-col bg-background font-serif leading-relaxed text-text"
   >
     <Brand as="header" class="sticky top-0 z-10" transition:persist />
-    <div class="flex-grow" transition:animate="slide">
+    <div class="flex-grow">
       <slot />
     </div>
     <Brand as="footer" transition:persist />
