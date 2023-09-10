@@ -7,5 +7,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: "https://martinstanicio.github.io",
   base: "/desvelados",
-  integrations: [tailwind(), sitemap(), prefetch({ throttle: 3 })],
+  integrations: [tailwind(), sitemap(), prefetch()],
 });
