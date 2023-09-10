@@ -20,6 +20,8 @@ const { title, href, img, price, slug } = Astro.props;
     alt={title}
     transition:name={slug}
     class="aspect-[4/3] bg-primary object-cover object-center"
+    format="avif"
+    quality="mid"
   />
   <div class="flex flex-grow flex-col justify-between gap-4 bg-secondary p-4">
     <div>
