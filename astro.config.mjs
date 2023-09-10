@@ -3,6 +3,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  base: "desvelados/",
+  site: "https://martinstanicio.github.io",
+  base: "/desvelados",
   integrations: [tailwind()],
 });
