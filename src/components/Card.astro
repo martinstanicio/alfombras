@@ -14,10 +14,15 @@ interface Props {
 const { title, href, img, price, slug } = Astro.props;
 ---
 
-<article class="block overflow-hidden rounded">
-  <Image src={img} alt={title} transition:name={slug} class="bg-primary" />
-  <div class="bg-secondary p-4">
-    <div class="space-y-4">
+<article class="flex flex-col overflow-hidden">
+  <Image
+    src={img}
+    alt={title}
+    transition:name={slug}
+    class="aspect-[4/3] bg-primary object-cover object-center"
+  />
+  <div class="flex flex-grow flex-col justify-between gap-4 bg-secondary p-4">
+    <div>
       <h3 class="text-primary-dark text-xl font-bold">{title}</h3>
       <slot />
     </div>
