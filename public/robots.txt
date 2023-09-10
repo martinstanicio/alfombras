@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://martinstanicio.github.io/desvelados/sitemap-index.xml
