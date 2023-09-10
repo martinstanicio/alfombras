@@ -2,22 +2,9 @@
 import genPath from "../util/generatePath";
 import logo from "../assets/logo.png";
 import { Image } from "astro:assets";
-
-interface Props {
-  as: keyof HTMLElementTagNameMap;
-  class?: string;
-}
-
-const { as: Wrapper, class: className = "" } = Astro.props;
 ---
 
-<div class:list={["bg-text py-4 text-background", className]}>
-  <Wrapper class="container flex items-center justify-between">
-    <a href={genPath("")}>
-      <Image src={logo} alt="logo" class="h-8 w-auto" />
-      <span class="sr-only">Desvelados</span>
-    </a>
-
-    <a href="https://www.instagram.com/cdn.promo2023/">Instagram</a>
-  </Wrapper>
-</div>
+<a href={genPath("")}>
+  <Image src={logo} alt="logo" class="h-8 w-auto" />
+  <span class="sr-only">Desvelados</span>
+</a>

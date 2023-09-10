@@ -1,0 +1,29 @@
+---
+import genPath from "../util/generatePath";
+import Brand from "./Brand.astro";
+import { icons } from "feather-icons";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className = "" } = Astro.props;
+---
+
+<div class:list={["bg-text py-4 text-background", className]}>
+  <header class="container">
+    <nav class="flex items-center justify-between">
+      <a href={genPath("")}>
+        <div class="md:hidden" set:html={icons.home.toSvg()} />
+        <span class="sr-only md:not-sr-only">Inicio</span>
+      </a>
+
+      <Brand />
+
+      <a href="https://www.instagram.com/cdn.promo2023/">
+        <div class="md:hidden" set:html={icons.instagram.toSvg()} />
+        <span class="sr-only md:not-sr-only">Instagram</span>
+      </a>
+    </nav>
+  </header>
+</div>

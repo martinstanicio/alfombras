@@ -1,7 +1,8 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import genPath from "../util/generatePath";
-import Brand from "../components/Brand.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
   title: string;
@@ -32,11 +33,11 @@ const { title, description } = Astro.props;
   <body
     class="flex min-h-screen flex-col bg-background font-serif leading-relaxed text-text"
   >
-    <Brand as="header" class="sticky top-0 z-10" transition:persist />
+    <Header class="sticky top-0 z-10" transition:persist />
     <div class="flex-grow">
       <slot />
     </div>
-    <Brand as="footer" transition:persist />
+    <Footer transition:persist />
     <style is:global>
       h1,
       h2,
