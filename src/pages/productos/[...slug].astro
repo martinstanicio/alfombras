@@ -21,6 +21,16 @@ const {
   data: { title, description, price, img },
 } = product;
 const { Content } = await product.render();
+
+const link = new URL("https://api.whatsapp.com/send");
+link.searchParams.append("phone", import.meta.env.PUBLIC_PHONE);
+link.searchParams.append(
+  "text",
+  `Hola, quiero realizar el siguiente pedido para retirar durante el microemprendimiento.
+
+Producto: ${title}
+Precio: ${ARS.format(price)}`,
+);
 ---
 
 <Layout title={title} description={description}>
@@ -46,7 +56,7 @@ const { Content } = await product.render();
       <Content />
     </div>
 
-    <Checkout />
+    <Checkout href={link} />
   </section>
 
   <!-- desktop -->
@@ -71,7 +81,7 @@ const { Content } = await product.render();
         </p>
       </div>
 
-      <Checkout />
+      <Checkout href={link} />
     </div>
   </section>
 </Layout>

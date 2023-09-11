@@ -1,9 +1,15 @@
 ---
 import Button from "./Button.astro";
+
+interface Props {
+  href: URL;
+}
+
+const { href } = Astro.props;
 ---
 
 <div class="space-y-2">
-  <Button href="" class="w-full text-center">Reservar</Button>
+  <Button href={href.toString()} class="w-full text-center">Reservar</Button>
   <p class="text-sm">
     Puedes realizar la reserva de tu producto por WhatsApp y retirarlo durante
     el microemprendimiento.
