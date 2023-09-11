@@ -19,7 +19,7 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v0
         env:
-          PUBLIC_PHONE: ${{ secrets.PUBLIC_PHONE }}
+          PUBLIC_PHONE: ${{ env.PUBLIC_PHONE }}
 
   deploy:
     needs: build
