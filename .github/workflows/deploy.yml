@@ -56,7 +56,7 @@ jobs:
         working-directory: ${{ env.BUILD_PATH }}
       - name: Build with Astro
         run: |
-          PUBLIC_PHONE=${{ secrets.PUBLIC_PHONE }} \
+          PUBLIC_PHONE=${{ vars.PUBLIC_PHONE }} \
           yarn astro build
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
