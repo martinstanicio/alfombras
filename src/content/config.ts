@@ -1,4 +1,5 @@
 import { defineCollection, z } from "astro:content";
+import { names } from "../util/fragances";
 
 const productsCollection = defineCollection({
   type: "content",
@@ -8,6 +9,7 @@ const productsCollection = defineCollection({
       description: z.string(),
       price: z.number(),
       img: image(),
+      fragances: z.array(z.enum(names)).optional(),
     }),
 });
 

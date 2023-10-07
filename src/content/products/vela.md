@@ -3,6 +3,11 @@ title: Vela
 description: Haz de tu casa un espacio de relajación con estas elegantes velas
 price: 1000
 img: ./vela.jpg
+fragances:
+  - vainilla
+  - lavanda
+  - gardenia
+  - almendas, miel y vainilla
 ---
 
 Nuestras velas son elegantes y están hechas con cera de alta calidad. Vienen en diferentes tamaños y colores para adaptarse a tus preferencias.

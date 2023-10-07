@@ -6,6 +6,7 @@ import { ARS } from "../../util/currency";
 import Checkout from "../../components/Checkout.astro";
 import genPath from "../../util/generatePath";
 import { icons } from "feather-icons";
+import { fragancesColors } from "../../util/fragances";
 
 export async function getStaticPaths() {
   const products = await getCollection("products");
@@ -18,7 +19,7 @@ export async function getStaticPaths() {
 const { product } = Astro.props;
 const {
   slug,
-  data: { title, description, price, img },
+  data: { title, description, price, img, fragances },
 } = product;
 const { Content } = await product.render();
 
@@ -53,6 +54,22 @@ Precio: ${ARS.format(price)}`,
       <p class="text-3xl font-bold">
         {ARS.format(price)}
       </p>
+
+      {
+        !!fragances && (
+          <ul class="flex list-none flex-wrap gap-2 text-sm">
+            {fragances.map((fragance: keyof typeof fragancesColors) => (
+              <li
+                class="rounded-full bg-gray-200 px-2 py-1"
+                style={`background-color: ${fragancesColors[fragance]}`}
+              >
+                {fragance}
+              </li>
+            ))}
+          </ul>
+        )
+      }
+
       <Content />
     </div>
 
@@ -80,6 +97,21 @@ Precio: ${ARS.format(price)}`,
           {ARS.format(price)}
         </p>
       </div>
+
+      {
+        !!fragances && (
+          <ul class="flex list-none flex-wrap gap-2 text-sm">
+            {fragances.map((fragance: keyof typeof fragancesColors) => (
+              <li
+                class="rounded-full bg-gray-200 px-2 py-1"
+                style={`background-color: ${fragancesColors[fragance]}`}
+              >
+                {fragance}
+              </li>
+            ))}
+          </ul>
+        )
+      }
 
       <Checkout href={link} />
     </div>
