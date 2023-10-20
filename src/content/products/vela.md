@@ -1,7 +1,7 @@
 ---
 title: Vela
 description: Haz de tu casa un espacio de relajación con estas elegantes velas
-price: 1000
+price: 1200
 img: ./vela.jpg
 fragances:
   - gardenia

@@ -1,7 +1,7 @@
 ---
 title: Atomizador
 description: Lleva tus aromas favoritos contigo a donde vayas
-price: 1000
+price: 800
 img: ./atomizador.jpg
 fragances:
   - gardenia
