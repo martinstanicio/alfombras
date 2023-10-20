@@ -1,5 +1,6 @@
 ---
 import { ARS } from "../util/currency";
+import { widths } from "../util/sizes";
 import Button from "./Button.astro";
 import { Image } from "astro:assets";
 
@@ -21,6 +22,7 @@ const { title, href, img, price, slug } = Astro.props;
     class="aspect-[4/3] bg-primary object-cover object-center"
     format="avif"
     quality="mid"
+    widths={widths}
   />
   <div class="flex flex-grow flex-col justify-between gap-4 bg-secondary p-4">
     <div>

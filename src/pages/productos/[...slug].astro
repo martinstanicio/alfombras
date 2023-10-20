@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import { ARS } from "../../util/currency";
+import { widths } from "../util/sizes";
 import Checkout from "../../components/Checkout.astro";
 import genPath from "../../util/generatePath";
 import { icons } from "feather-icons";
@@ -48,6 +49,7 @@ Precio: ${ARS.format(price)}`,
         alt={title}
         format="avif"
         quality="mid"
+        widths={widths}
         class="rounded bg-primary"
       />
       <p class="text-3xl font-bold">
@@ -83,6 +85,7 @@ Precio: ${ARS.format(price)}`,
         alt={title}
         format="avif"
         quality="mid"
+        widths={widths}
         class="rounded bg-primary"
       />
       <Content />
