@@ -3,6 +3,14 @@ title: Atomizador
 description: Lleva tus aromas favoritos contigo a donde vayas
 price: 1000
 img: ./atomizador.jpg
+fragances:
+  - gardenia
+  - eucalipto
+  - coco
+  - jazmin
+  - vainilla
+  - lavanda
+  - almendas, miel y vainilla
 ---
 
 Una botella elegante y compacta que cabe fácilmente en tu bolsa o bolsillo. Viene en una variedad de colores y estilos para adaptarse a tu estilo personal.

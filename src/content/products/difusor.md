@@ -3,6 +3,12 @@ title: Difusor
 description: Llena el ambiente de tus fragancias favoritas con elegancia
 price: 1000
 img: ./difusor.jpg
+fragances:
+  - coco
+  - jazmin
+  - vainilla
+  - lavanda
+  - almendas, miel y vainilla
 ---
 
 Un dispositivo moderno y elegante que se adapta perfectamente a cualquier espacio. Viene en varios tamaños y materiales de alta calidad.
