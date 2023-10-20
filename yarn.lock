@@ -523,6 +523,16 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.19.5.tgz#faad84c41ba12e3a0acb52571df9bff37bee75f6"
   integrity sha512-czTrygUsB/jlM8qEW5MD8bgYU2Xg14lo6kBDXW6HdxKjh8M5PzETGiSHaz9MtbXBYDloHNUAUW2tMiKW4KM9Mw==
 
+"@fontsource-variable/karla@^5.0.17":
+  version "5.0.17"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/karla/-/karla-5.0.17.tgz#3ca15318828ecd46633451a1e6095b765d4d8abe"
+  integrity sha512-6ebPkTvAVzRmZ31Rb1yQAlmmJPuKy1NPW3x01JcXLAT5/En4CvHIqhOIbn9V60eTjaeHIg6v+UBkvazcYqpyLg==
+
+"@fontsource/merriweather@^5.0.8":
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/merriweather/-/merriweather-5.0.8.tgz#057ecbcd55fcd6592e4ce3254645075299916823"
+  integrity sha512-4vvR6psdKcGzaFCQL8fGCqMI/mOLKD+mhmUe3iQilx/4VFkIcF7wswWHZ7KCPeF24edX8yd0QXX0DQ1CenMrYA==
+
 "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz#7e02e6eb5df901aaedb08514203b096614024098"

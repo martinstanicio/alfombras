@@ -17,7 +17,7 @@ module.exports = {
         accent: "#004225",
       },
       fontFamily: {
-        sans: ["Karla", ...defaultTheme.fontFamily.sans],
+        sans: ["Karla Variable", ...defaultTheme.fontFamily.sans],
         serif: ["Merriweather", ...defaultTheme.fontFamily.serif],
       },
     },

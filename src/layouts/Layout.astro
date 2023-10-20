@@ -1,7 +1,11 @@
 ---
-import genPath from "../util/generatePath";
-import Header from "../components/Header.astro";
+import "@fontsource-variable/karla";
+import "@fontsource/merriweather/400.css";
+import "@fontsource/merriweather/700.css";
+
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import genPath from "../util/generatePath";
 
 interface Props {
   title: string;
@@ -20,12 +24,6 @@ const { title, description } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href={genPath("sitemap-index.xml")} />
     <link rel="icon" type="image/png" href={genPath("icon.png")} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Karla&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
     <title>Desvelados | {title}</title>
   </head>
   <body
