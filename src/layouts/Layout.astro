@@ -6,25 +6,61 @@ import "@fontsource/merriweather/700.css";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import genPath from "../util/generatePath";
+import { getImage } from "astro:assets";
 
 interface Props {
   title: string;
   description: string;
+  route: string;
+  img: ImageMetadata;
 }
 
-const { title, description } = Astro.props;
+const { title, description, route, img } = Astro.props;
+
+const keywords = [
+  "aromaterapia",
+  "atomizador",
+  "difusor",
+  "jabón",
+  "sahumerios",
+  "vela",
+  "velas",
+  "artesanal",
+];
+
+const base = "https://martinstanicio.github.io/";
+const url = new URL(route, base);
+
+const optimizedImg = await getImage({ src: img });
+const metaImage = new URL(optimizedImg.src, base);
 ---
 
 <!doctype html>
 <html lang="es" class="overflow-y-scroll">
   <head>
-    <meta charset="UTF-8" />
+    <title>Desvelados | {title}</title>
+    <meta name="title" content={`Desvelados | ${title}`} />
     <meta name="description" content={description} />
+    <meta name="keywords" content={keywords.join(",")} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta property="og:title" content={`Desvelados | ${title}`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={metaImage} />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={url} />
+    <meta property="twitter:title" content={`Desvelados | ${title}`} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={metaImage} />
+
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+
     <link rel="sitemap" href={genPath("sitemap-index.xml")} />
     <link rel="icon" type="image/png" href={genPath("icon.png")} />
-    <title>Desvelados | {title}</title>
   </head>
   <body
     class="flex min-h-screen flex-col bg-background font-serif leading-relaxed text-text"

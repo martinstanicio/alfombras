@@ -35,7 +35,12 @@ Precio: ${ARS.format(price)}`,
 );
 ---
 
-<Layout title={title} description={description}>
+<Layout
+  title={title}
+  description={description}
+  route={genPath(`productos/${slug}`)}
+  img={img}
+>
   <!-- mobile -->
   <section class="container space-y-8 py-8 md:hidden">
     <div class="space-y-4">
