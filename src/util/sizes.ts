@@ -1,6 +1,1 @@
-export const widths = [
-  200,
-  400,
-  600,
-  800,
-];
+export const widths = [352, 704, 1180];

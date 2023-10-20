@@ -12,7 +12,7 @@ interface Props {
   slug: string;
 }
 
-const { title, href, img, price, slug } = Astro.props;
+const { title, href, img, price } = Astro.props;
 ---
 
 <article class="flex flex-col overflow-hidden rounded">
@@ -22,7 +22,8 @@ const { title, href, img, price, slug } = Astro.props;
     class="aspect-[4/3] bg-primary object-cover object-center"
     format="avif"
     quality="mid"
-    widths={widths}
+    widths={[...widths, img.width]}
+    sizes="(min-width: 1040px) 277px, (min-width: 780px) 352px, (min-width: 640px) 288px, calc(100vw - 32px)"
   />
   <div class="flex flex-grow flex-col justify-between gap-4 bg-secondary p-4">
     <div>

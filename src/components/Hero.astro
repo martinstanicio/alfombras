@@ -1,26 +1,44 @@
 ---
 import hero from "../assets/hero.jpg";
-import { getImage } from "astro:assets";
+import { Image } from "astro:assets";
 
-const optimizedHero = await getImage({
-  src: hero,
-  format: "avif",
-  quality: "mid",
-});
+const widths = [
+  320,
+  375,
+  425,
+  768,
+  1030,
+  1430,
+  1740,
+  2000,
+  2230,
+  2440,
+  2630,
+  2810,
+  2980,
+  3140,
+  3290,
+  3440,
+  3580,
+  hero.width,
+];
 ---
 
-<div
-  class={`grid min-h-[60vh] place-items-center bg-cover bg-center bg-primary`}
-  style={`background-image: url(${optimizedHero.src});`}
->
-  <div
-    class="grid h-full w-full place-items-center backdrop-brightness-50 lg:backdrop-blur-sm"
+<div class="relative grid min-h-[50vh] place-items-center bg-primary">
+  <Image
+    src={hero}
+    alt=""
+    format="avif"
+    quality="mid"
+    loading="eager"
+    class="absolute h-full w-full object-cover brightness-50 lg:blur-sm"
+    widths={widths}
+    sizes="100vw"
+  />
+  <h1
+    class="container relative py-4 text-center text-2xl text-white sm:text-3xl md:text-4xl lg:px-16"
+    style="text-wrap: balance;"
   >
-    <h1
-      class="container px-8 py-4 text-center text-2xl text-white sm:text-3xl md:text-4xl lg:px-16"
-      style="text-wrap: balance;"
-    >
-      Relajación y tranquilidad en tus manos con <strong>Desvelados</strong>
-    </h1>
-  </div>
+    Relajación y tranquilidad en tus manos con <strong>Desvelados</strong>
+  </h1>
 </div>
