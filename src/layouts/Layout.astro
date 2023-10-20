@@ -1,5 +1,4 @@
 ---
-import { ViewTransitions } from "astro:transitions";
 import genPath from "../util/generatePath";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -28,16 +27,15 @@ const { title, description } = Astro.props;
       rel="stylesheet"
     />
     <title>Desvelados | {title}</title>
-    <ViewTransitions />
   </head>
   <body
     class="flex min-h-screen flex-col bg-background font-serif leading-relaxed text-text"
   >
-    <Header class="sticky top-0 z-10" transition:persist />
+    <Header class="sticky top-0 z-10" />
     <div class="flex-grow">
       <slot />
     </div>
-    <Footer transition:persist />
+    <Footer />
     <style is:global>
       h1,
       h2,
