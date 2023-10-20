@@ -4,9 +4,11 @@ description: Haz de tu casa un espacio de relajación con estas elegantes velas
 price: 1000
 img: ./vela.jpg
 fragances:
+  - gardenia
+  - eucalipto
+  - coco
   - vainilla
   - lavanda
-  - gardenia
   - almendas, miel y vainilla
 ---
 
