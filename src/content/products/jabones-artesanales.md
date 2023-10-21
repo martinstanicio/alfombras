@@ -5,6 +5,6 @@ price: 300
 img: ./jabones-artesanales.jpg
 ---
 
-Nuestros jabones artesanales son meticulosamente elaborados a mano, utilizando ingredientes naturales y orgánicos. Vienen en una variedad de formas y colores encantadores.
+Nuestros jabones artesanales son meticulosamente elaborados a mano, utilizando ingredientes naturales y orgánicos.
 
 Cada jabón está enriquecido con aceites esenciales que nutren la piel y calman los sentidos. Disfruta de una experiencia de baño rejuvenecedora y aromática que equilibra cuerpo y mente.

@@ -11,6 +11,6 @@ fragances:
   - almendas, miel y vainilla
 ---
 
-Un dispositivo moderno y elegante que se adapta perfectamente a cualquier espacio. Viene en varios tamaños y materiales de alta calidad.
+Un dispositivo moderno y elegante que se adapta perfectamente a cualquier espacio.
 
 El difusor dispersa suavemente las fragancias de tus aceites esenciales, creando un ambiente relajante en tu hogar u oficina. Mejora la calidad del aire y promueve la relajación.
