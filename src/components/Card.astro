@@ -15,7 +15,7 @@ interface Props {
 const { title, href, img, price } = Astro.props;
 ---
 
-<article class="flex flex-col overflow-hidden rounded">
+<article class="flex flex-col overflow-hidden rounded bg-secondary">
   <Image
     src={img}
     alt={title}
@@ -25,7 +25,7 @@ const { title, href, img, price } = Astro.props;
     widths={[...widths, img.width]}
     sizes="(min-width: 1040px) 277px, (min-width: 780px) 352px, (min-width: 640px) 288px, calc(100vw - 32px)"
   />
-  <div class="flex flex-grow flex-col justify-between gap-4 bg-secondary p-4">
+  <div class="flex flex-grow flex-col justify-between gap-4 p-4">
     <div>
       <h3 class="text-primary-dark text-xl font-bold">{title}</h3>
       <slot />
