@@ -1,7 +1,7 @@
 ---
 title: Jabones artesanales
 description: Transforma una simple ducha en un momento de profunda relajación
-price: 300
+price: 500
 img: ./jabones-artesanales.jpg
 ---
 
