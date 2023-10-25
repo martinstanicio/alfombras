@@ -38,20 +38,20 @@ const metaImage = new URL(optimizedImg.src, base);
 <!doctype html>
 <html lang="es" class="overflow-y-scroll">
   <head>
-    <title>Desvelados | {title}</title>
-    <meta name="title" content={`Desvelados | ${title}`} />
+    <title>{title} | Desvelados</title>
+    <meta name="title" content={`${title} | Desvelados`} />
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords.join(",")} />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content={url} />
-    <meta property="og:title" content={`Desvelados | ${title}`} />
+    <meta property="og:title" content={`${title} | Desvelados`} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={metaImage} />
 
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={url} />
-    <meta property="twitter:title" content={`Desvelados | ${title}`} />
+    <meta property="twitter:title" content={`${title} | Desvelados`} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={metaImage} />
 
