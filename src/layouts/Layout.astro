@@ -3,30 +3,15 @@ import "@fontsource-variable/karla";
 import "@fontsource/merriweather/400.css";
 import "@fontsource/merriweather/700.css";
 
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-import genPath from "../util/generatePath";
 import { getImage } from "astro:assets";
 
 interface Props {
   title: string;
-  description: string;
   route: string;
   img: ImageMetadata;
 }
 
-const { title, description, route, img } = Astro.props;
-
-const keywords = [
-  "aromaterapia",
-  "atomizador",
-  "difusor",
-  "jabón",
-  "sahumerios",
-  "vela",
-  "velas",
-  "artesanal",
-];
+const { title, route, img } = Astro.props;
 
 const base = "https://martinstanicio.github.io/";
 const url = new URL(route, base);
@@ -38,38 +23,27 @@ const metaImage = new URL(optimizedImg.src, base);
 <!doctype html>
 <html lang="es" class="overflow-y-scroll">
   <head>
-    <title>{title} | Desvelados</title>
-    <meta name="title" content={`${title} | Desvelados`} />
-    <meta name="description" content={description} />
-    <meta name="keywords" content={keywords.join(",")} />
+    <title>{title}</title>
+    <meta name="title" content={title} />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content={url} />
-    <meta property="og:title" content={`${title} | Desvelados`} />
-    <meta property="og:description" content={description} />
+    <meta property="og:title" content={title} />
     <meta property="og:image" content={metaImage} />
 
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={url} />
-    <meta property="twitter:title" content={`${title} | Desvelados`} />
-    <meta property="twitter:description" content={description} />
+    <meta property="twitter:title" content={title} />
     <meta property="twitter:image" content={metaImage} />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-
-    <link rel="sitemap" href={genPath("sitemap-index.xml")} />
-    <link rel="icon" type="image/png" href={genPath("icon.png")} />
   </head>
   <body
     class="flex min-h-screen flex-col bg-background font-serif leading-relaxed text-text"
   >
-    <Header class="sticky top-0 z-10" />
-    <div class="flex-grow">
-      <slot />
-    </div>
-    <Footer />
+    <slot />
     <style is:global>
       h1,
       h2,

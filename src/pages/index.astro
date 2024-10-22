@@ -1,6 +1,5 @@
 ---
 import genPath from "../util/generatePath";
-import Hero from "../components/Hero.astro";
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
@@ -9,31 +8,15 @@ import img from "../assets/hero.jpg";
 const products = await getCollection("products");
 ---
 
-<Layout
-  title="Relajación y tranquilidad en tus manos con Desvelados"
-  description="Descubre la relajación y la tranquilidad a través de nuestros productos de aromaterapia. Sumérgete en un mundo de fragancias y armonía con Desvelados."
-  route={genPath("")}
-  img={img}
->
-  <Hero />
+<Layout title="Alfombras" route={genPath("")} img={img}>
   <section class="container space-y-4 py-8">
-    <h2 class="scroll-mt-24 text-center text-2xl md:text-3xl" id="productos">
-      Nuestros productos
-    </h2>
+    <h1 class="scroll-mt-24 text-center text-2xl md:text-3xl">Alfombras</h1>
     <div
       class="mx-auto grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
     >
       {
-        products.map(({ data: { title, description, price, img }, slug }) => (
-          <Card
-            title={title}
-            img={img}
-            href={genPath(`productos/${slug}`)}
-            price={price}
-            slug={slug}
-          >
-            <p>{description}</p>
-          </Card>
+        products.map(({ data: { title, img } }) => (
+          <Card title={title} img={img} />
         ))
       }
     </div>

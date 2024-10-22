@@ -1,18 +1,21 @@
 ---
-import { ARS } from "../util/currency";
 import { widths } from "../util/sizes";
-import Button from "./Button.astro";
 import { Image } from "astro:assets";
+import Checkout from "./Checkout.astro";
 
 interface Props {
   title: string;
-  href: string;
   img: ImageMetadata;
-  price: number;
-  slug: string;
 }
 
-const { title, href, img, price } = Astro.props;
+const { title, img } = Astro.props;
+
+const link = new URL("https://api.whatsapp.com/send");
+link.searchParams.append("phone", import.meta.env.PUBLIC_PHONE);
+link.searchParams.append(
+  "text",
+  `Hola, estoy interesado en el producto "${title}"`
+);
 ---
 
 <article class="flex flex-col overflow-hidden rounded bg-secondary">
@@ -30,11 +33,6 @@ const { title, href, img, price } = Astro.props;
       <h3 class="text-primary-dark text-xl font-bold">{title}</h3>
       <slot />
     </div>
-    <div class="flex items-center gap-4">
-      <Button href={href}>Comprar</Button>
-      <span class="text-lg font-bold">
-        {ARS.format(price)}
-      </span>
-    </div>
+    <Checkout href={link} />
   </div>
 </article>
